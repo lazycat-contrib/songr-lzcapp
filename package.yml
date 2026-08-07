@@ -1,0 +1,20 @@
+package: community.lazycat.app.songr
+version: 1.1.1
+name: Songr
+description: Browser controller for your Roon Core
+author: roethlar
+license: MIT
+homepage: https://github.com/roethlar/songr
+min_os_version: 1.5.0
+
+locales:
+  zh:
+    name: Songr
+    description: Roon Core 的浏览器控制器
+  en:
+    name: Songr
+    description: Browser controller for your Roon Core
+
+permissions:
+  required:
+    - net.internet

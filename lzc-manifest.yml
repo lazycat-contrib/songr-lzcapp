@@ -1,0 +1,25 @@
+application:
+  subdomain: songr
+  upstreams:
+    - location: /
+      backend: http://songr:3333/
+
+services:
+  songr:
+    # ghcr.io/roethlar/songr:1.1.1
+    image: ghcr.io/roethlar/songr:1.1.1
+    environment:
+      - HOST=0.0.0.0
+      - PORT=3333
+      - ROON_TOKEN_PATH=/app/config/roon-token.json
+      - IMAGE_CACHE_PATH=/app/data/image-cache
+      - RECENTLY_PLAYED_PATH=/app/data/recently-played.json
+      - FAVORITES_PATH=/app/data/favorites.json
+      - TRUST_PROXY=true
+    binds:
+      - /lzcapp/var/config:/app/config
+      - /lzcapp/var/data:/app/data
+
+usage: |
+  Open Songr, then enable "Songr (your machine's name)" in Roon -> Settings -> Extensions.
+  Songr indexes the Roon library after pairing. Large libraries may take a few minutes.
