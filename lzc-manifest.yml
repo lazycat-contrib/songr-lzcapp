@@ -3,11 +3,11 @@ application:
   upstreams:
     - location: /
       backend: http://songr:3333/
-
 services:
   songr:
     # ghcr.io/roethlar/songr:1.1.1
-    image: ghcr.io/roethlar/songr:1.1.1
+    # upstream: ghcr.io/roethlar/songr:v1.1.1
+    image: registry.lazycat.cloud/czyt/roethlar/songr:37793bd9656cd2a3
     environment:
       - HOST=0.0.0.0
       - PORT=3333
@@ -19,7 +19,6 @@ services:
     binds:
       - /lzcapp/var/config:/app/config
       - /lzcapp/var/data:/app/data
-
 usage: |
   Open Songr, then enable "Songr (your machine's name)" in Roon -> Settings -> Extensions.
   Songr indexes the Roon library after pairing. Large libraries may take a few minutes.
