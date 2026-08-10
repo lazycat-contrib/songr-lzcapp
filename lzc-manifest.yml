@@ -20,5 +20,10 @@ services:
       - /lzcapp/var/config:/app/config
       - /lzcapp/var/data:/app/data
 usage: |
+  中文：
+  打开 Songr，然后在 Roon 的“设置”→“扩展”中启用“Songr（你的设备名称）”。
+  配对后，Songr 会为 Roon 音乐库建立索引；大型音乐库可能需要几分钟。
+
+  English:
   Open Songr, then enable "Songr (your machine's name)" in Roon -> Settings -> Extensions.
   Songr indexes the Roon library after pairing. Large libraries may take a few minutes.
