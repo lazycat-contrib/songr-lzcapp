@@ -7,7 +7,7 @@ services:
   songr:
     # ghcr.io/roethlar/songr:1.1.1
     # upstream: ghcr.io/roethlar/songr:v1.3.0
-    image: registry.lazycat.cloud/czyt/roethlar/songr:0f07614b90c39abe
+    image: ghcr.1ms.run/roethlar/songr:v1.3.0
     environment:
       - HOST=0.0.0.0
       - PORT=3333
